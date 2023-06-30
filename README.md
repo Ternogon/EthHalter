@@ -14,13 +14,15 @@ A set of scripts (programs) to restrict access to the Internet from an automated
 | :x:                   | Not working/supported     |
 
   - **Windows-based**
-    - :white_check_mark: `Powershell`, disabling interface, automation via Windows Scheduler, trigger: `time`;
-    - 🕒 `Powershell`, disabling interface, automation via Windows Scheduler, trigger: `opened webbrowser`;
-    - 🕒 `Powershell`, enabling false-proxy, automation via Windows Scheduler, trigger: `time`;
-    - 🕒 `Powershell`, enabling false-proxy, automation via Windows Scheduler, trigger: `opened webbrowser`;
-    - 🕒 `Python 3`, automation via Windows Scheduler, trigger: `n/a`;
+    - :white_check_mark: `Powershell`, disabling interface, automation via Windows Scheduler, trigger: `time`, logic: `path`;
+    - 🕒 `Powershell`, disabling interface, automation via Windows Scheduler, trigger: `time`, logic: `process`;
+    - 🕒 `Powershell`, enabling false-proxy, automation via Windows Scheduler, trigger: `time`, logic: `path`;
+    - 🕒 `Powershell`, enabling false-proxy, automation via Windows Scheduler, trigger: `time`, logic: `process`;
+    - 🕒 `Python 3`, automation via Windows Scheduler, trigger: `n/a`, logic: `path`;
     - _in progress..._
   - **Unix-based**
-    - 🕒 Bash, automation via `cron`, trigger: `n/a`;
-    - 🕒 `Python 3`, automation via `cron`, trigger: `n/a`;
+    - 🕒 Bash, automation via `cron`, trigger: `n/a`, logic: `path`;
+    - 🕒 Bash, automation via `cron`, trigger: `n/a`, logic: `process`;
+    - 🕒 `Python 3`, automation via `cron`, trigger: `n/a`, logic: `path`;
+    - 🕒 `Python 3`, automation via `cron`, trigger: `n/a`, logic: `process`;
     - _in progress..._
