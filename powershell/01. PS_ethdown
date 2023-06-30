@@ -1,0 +1,14 @@
+Write-Host "01. PS_ethdown - EthHalter Script © TERNOGON.NET"
+$checkeddirectory = 'C:\trn\test\test'
+
+if (Test-Path -Path $checkeddirectory) {
+	Write-Host "Directory detected."
+	$adapterNametoON = Get-NetAdapter | % { Process { If (( $_.Status -eq "disabled" ) -and ($_.Name -like "Ethernet*") ){ $_.Name } }};
+	Write-Host $adapterNametoON
+	if ($adapterNametoON -ne $NULL) { Enable-NetAdapter -Name $adapterNametoON -Confirm:$false };
+} else {
+	Write-Host "Directory is not exists."
+	$adapterNametoOFF = Get-NetAdapter | % { Process { If (( $_.Status -eq "up" ) -and ($_.Name -like "Ethernet*") ){ $_.Name } }};
+	if ($adapterNametoOFF -ne $NULL) { Disable-NetAdapter -Name $adapterNametoOFF -Confirm:$false };
+	Write-Host $adapterNametoOFF
+};
